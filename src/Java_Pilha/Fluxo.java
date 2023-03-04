@@ -12,7 +12,14 @@ public class Fluxo {
        try {
     	   metodo2();
        } catch(ArithmeticException ex) {
+    	 //String msg = ex.getMessage();
+           //System.out.println("ArithmeticException " + msg);
     	   System.out.println("ArithmeticException");
+    	   ex.printStackTrace();
+       
+       } catch(NullPointerException ex) {
+           String msg = ex.getMessage();
+           System.out.println("NullPointerException " + msg);
        }
        
         System.out.println("Fim do metodo1");
@@ -23,7 +30,10 @@ public class Fluxo {
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
          
-            	int a = i / 0;
+            	//int a = i / 0;
+            	Conta c = null;
+            	c.deposita();
+            
             }
         System.out.println("Fim do metodo2");
     }
