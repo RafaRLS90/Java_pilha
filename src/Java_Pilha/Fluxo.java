@@ -11,16 +11,13 @@ public class Fluxo {
         System.out.println("Ini do metodo1");
        try {
     	   metodo2();
-       } catch(ArithmeticException ex) {
-    	 //String msg = ex.getMessage();
-           //System.out.println("ArithmeticException " + msg);
+       } catch(ArithmeticException |NullPointerException  ex) {
+    	   String msg = ex.getMessage();
+           System.out.println("ArithmeticException " + msg);
     	   System.out.println("ArithmeticException");
     	   ex.printStackTrace();
        
-       } catch(NullPointerException ex) {
-           String msg = ex.getMessage();
-           System.out.println("NullPointerException " + msg);
-       }
+       } 
        
         System.out.println("Fim do metodo1");
     }
