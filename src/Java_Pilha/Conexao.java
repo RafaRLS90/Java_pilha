@@ -1,6 +1,8 @@
 package Java_Pilha;
 
-public class Conexao {
+public class Conexao implements AutoCloseable{
+	
+	
 	public Conexao() {
 		System.out.println("Abrindo conexao");
 	}
@@ -10,8 +12,11 @@ public class Conexao {
 		throw new IllegalStateException();
 	}	
    
-	public void fecha() {
-	System.out.println("Fechando conexao");
-		}
+
+	@Override
+	public void close() {
+		// TODO Auto-generated method stub
+		System.out.println("Fechando conexao");
+	}
 		
 }
